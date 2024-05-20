@@ -1,0 +1,39 @@
+<% layout("/layouts/boilerPlate") -%>
+    <h2>Here is All List</h2>
+    <!-- <form method="GET" action ="/listing/new">
+        <button>create post</button>
+    </form> -->
+
+
+    <div class="row row-colm-lg-3 row-colm-md-3 row-colm-sm-2 row-colm-esm-1">
+        <% for(let lists of all_list){ %>
+                <div onclick="toshow('<%= lists._id %>')" class="card" style="width:27rem">
+                    <img src="<%= lists.image.url %>" class="card-img-top" alt="listing_imgae" >
+                    <div class="card-body">
+                        <div class="card-img-overlay"></div>
+                        <p class="card-text">
+                            <b>
+                                <%= lists.title %>
+                            </b> <br>
+                            <% if (lists.price !== null && lists.price !== undefined) { %>
+                                &#8377; <%= lists.price.toLocaleString("en-IN") %> / night
+                            <% } else { %>
+                                Price information not available
+                            <% } %>
+                        </p>
+                    </div>
+                </div>
+                <%} %>
+    </div>
+    <!-- <ul>
+        <% for(let lists of all_list){ %>
+        <li><a href="/listing/<%= lists._id %>"><%= lists.title %></a></li>
+        <%} %>
+    </ul> -->
+    <script>
+        function toshow(id){
+            window.location.href=`http://localhost:5050/listing/${id}`
+        }
+    </script>
+    </body>
+  

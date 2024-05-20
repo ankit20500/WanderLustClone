@@ -1,0 +1,81 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+.searchbar {
+    width: 90%;
+}
+
+.searchbar input {
+    width: 50%;
+}
+.f_info_links a {
+    text-decoration: none;
+    color: #222222;
+}
+.f_info_links a:hover {
+    text-decoration: underline;
+}
+.f_info{
+    display: flex;
+    flex-direction: column;
+    background-color: #ebebeb;
+    text-align: center;
+    justify-content: center;
+}
+.f_info_social i{
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: larger;
+}
+
+.card{
+    margin-bottom: 2rem;
+    border: none !important;
+}
+.card-img-top{
+    border-radius: 10px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 20rem;
+}
+
+.card-body{
+    padding: 0 !important;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+.add-btn{
+    background-color: #fe424d !important;
+}
+.submit-btn{
+    background-color: #fe424d !important;
+}
+.card-show-img-top{
+    height: 30rem !important;
+    width: 70% !important;
+}

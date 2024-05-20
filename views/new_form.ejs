@@ -1,0 +1,41 @@
+<% layout("/layouts/boilerPlate") -%>
+<div class="row">
+    <div class="col-8 offset-2"><br>
+    <h2>Create your new listings</h2><br>
+    <form method="POST" action="/listing">
+        <div>
+            <b><label for="title" class="form-label">Title</label></b>
+            <input type="title" placeholder="enter title" name="listing[title]" class="form-control">
+        </div>
+        
+        <div>
+            <b><label for="description" class="form-label">Description</label></b>
+            <textarea placeholder="enter description" name="listing[description]" cols="100" rows="3" class="form-control"></textarea>
+        </div>
+        
+        <div>
+            <b><label for="image" class="form-label">Enter image URL</label></b>
+            <input type="text" placeholder="enter image url" name="listing[image][url]" class="form-control">
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <b><label for="price" class="form-label">Price</label></b>
+                <input type="number" placeholder="enter price" name="listing[price]" class="form-control">
+            </div>
+            
+            <div class="mb-3 col-md-8">
+                <b><label for="location" class="form-label">Location</label></b>
+                <input type="input" placeholder="enter location" name="listing[location]" class="form-control">
+            </div>
+        </div>
+        
+        <div>
+            <b><label for="country" class="form-label">Country</label></b>
+            <input type="input" placeholder="enter country" name="listing[country]" class="form-control">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-dark add-btn">Add</button>
+    </form>
+    </div>
+</div>
